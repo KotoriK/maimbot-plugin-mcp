@@ -1,0 +1,25 @@
+# MCP Plugin Configuration
+# 此配置文件定义Maimbot MCP插件的设置
+
+[plugin]
+enabled = true
+config_version = "0.1.0"
+
+[mcp.servers]
+# MCP服务器配置示例
+# 格式: server_name = { command = "命令", args = ["参数列表"], env = { "环境变量" = "值" } }
+
+# 示例1: 天气服务器 (使用npx运行)
+# weather = { command = "npx", args = ["-y", "@modelcontextprotocol/server-weather"] }
+
+# 示例2: 文件系统服务器
+# filesystem = { command = "npx", args = ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/allowed/files"] }
+
+# 示例3: GitHub服务器 (需要设置GITHUB_TOKEN环境变量)
+# github = { command = "npx", args = ["-y", "@modelcontextprotocol/server-github"], env = { "GITHUB_TOKEN" = "your_token_here" } }
+
+# 示例4: 自定义Python MCP服务器
+# custom = { command = "python", args = ["/path/to/your/mcp_server.py"] }
+
+# 示例5: 使用uv运行的服务器
+# example = { command = "uv", args = ["run", "mcp-server-example"] }
