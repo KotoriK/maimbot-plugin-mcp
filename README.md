@@ -1,0 +1,1 @@
+# maimbot-plugin-mcp
