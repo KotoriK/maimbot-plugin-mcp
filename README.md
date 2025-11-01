@@ -250,6 +250,7 @@ MCPToolWrapper.execute()
 maimbot-plugin-mcp/
 ├── maimbot_plugin_mcp/
 │   ├── __init__.py
+│   ├── _manifest.json     # 插件清单文件 (必需)
 │   ├── plugin.py          # 核心实现
 │   └── config.toml        # 配置模板
 ├── examples/
@@ -258,6 +259,20 @@ maimbot-plugin-mcp/
 │   └── test_mcp_client.py    # 测试
 └── README.md
 ```
+
+### 插件清单 (_manifest.json)
+
+根据[Maimbot插件规范](https://docs.mai-mai.org/develop/plugin_develop/manifest-guide.html)，所有插件都需要一个`_manifest.json`文件来描述插件的元数据：
+
+- **manifest_version**: 清单格式版本
+- **name**: 插件显示名称
+- **version**: 插件版本号
+- **description**: 插件功能描述
+- **author**: 作者信息
+- **plugin_info**: 插件类型和组件信息
+  - `plugin_type`: "tool_provider" (此插件提供工具)
+  - `components`: 动态注册的MCP工具
+  - `dependencies`: Python包依赖 (mcp>=1.0.0)
 
 ### 关键函数
 

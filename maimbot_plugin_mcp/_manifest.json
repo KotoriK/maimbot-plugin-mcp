@@ -1,0 +1,36 @@
+{
+  "manifest_version": 1,
+  "name": "MCP Bridge Plugin",
+  "version": "0.2.0",
+  "description": "透明桥接MCP服务器，自动将MCP工具注册为Maimbot原生工具，供LLM直接调用",
+  "author": {
+    "name": "KotoriK",
+    "url": "https://github.com/KotoriK"
+  },
+  "license": "MIT",
+  
+  "host_application": {
+    "min_version": "0.10.0"
+  },
+  "homepage_url": "https://github.com/KotoriK/maimbot-plugin-mcp",
+  "repository_url": "https://github.com/KotoriK/maimbot-plugin-mcp",
+  "keywords": ["mcp", "model-context-protocol", "tool", "bridge", "transparent"],
+  "categories": ["Tools", "Integration"],
+  
+  "default_locale": "zh-CN",
+  
+  "plugin_info": {
+    "is_built_in": false,
+    "plugin_type": "tool_provider",
+    "components": [
+      {
+        "type": "tool",
+        "name": "mcp_tools",
+        "description": "动态注册的MCP工具，从配置的MCP服务器自动发现"
+      }
+    ],
+    "dependencies": {
+      "python": ["mcp>=1.0.0"]
+    }
+  }
+}
